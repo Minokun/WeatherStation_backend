@@ -33,10 +33,9 @@ def apiData():
     result = res_deal + sqlServer()
 
     file_path = "F:\\nginx\html\\weatherStation\\apiData.json"
-    with codecs.open(file_path,'a','utf-8') as f:
+    with codecs.open(file_path,'w','utf-8') as f:
         f.write(json.dumps(result))
-    
-    print(json.dumps(result))
+        f.close()
 
 def sqlServer():
     import pymssql
@@ -52,18 +51,21 @@ def sqlServer():
     data_1 = dict(zip(list_header,map(validate,list(row))))
     data_1['PRE_1h'] = 0
     data_1['direction'] = directionJudge(data_1['WIN_D_Avg_10mi'])
+    data_1['WIN_S_Avg_10mi'] = data_1['WIN_S_Avg_10mi'] / 10
 
     cursor.execute("select top 1 AE,AF,BC,BCMX,BCMN from MD1002 ORDER BY TT DESC")
     row = cursor.fetchone()
     data_2 = dict(zip(list_header,map(validate,list(row))))
     data_2['PRE_1h'] = 0
     data_2['direction'] = directionJudge(data_2['WIN_D_Avg_10mi'])
+    data_2['WIN_S_Avg_10mi'] = data_2['WIN_S_Avg_10mi'] / 10
 
     cursor.execute("select top 1 AE,AF,BC,BCMX,BCMN from MD1003 ORDER BY TT DESC")
     row = cursor.fetchone()
     data_3 = dict(zip(list_header,map(validate,list(row))))
     data_3['PRE_1h'] = 0
     data_3['direction'] = directionJudge(data_3['WIN_D_Avg_10mi'])
+    data_3['WIN_S_Avg_10mi'] = data_3['WIN_S_Avg_10mi'] / 10
 
     data_sqlserver = []
     data_sqlserver.append(data_1)
@@ -105,10 +107,3 @@ def directionJudge(num):
 
 if __name__ == "__main__":
     apiData()
-
-
-# In[38]:
-
-
-print(279 / 10)
-
