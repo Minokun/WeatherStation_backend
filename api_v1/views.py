@@ -8,6 +8,7 @@ def apiData(request):
     import requests
     import json
     import time
+    import codecs
 
     current_time_unix = int(time.time()) - 8 * 3600 - 5 * 60
     current_time = time.strftime("%Y%m%d%H",time.localtime(current_time_unix))
@@ -29,6 +30,11 @@ def apiData(request):
         res_deal.append(item)
 
     result = res_deal + sqlServer()
+
+    file_path = "F:\\nginx\html\\weatherStation\\apiData.json"
+    with codecs.open(file_path,'a','utf-8') as f:
+        f.write(json.dumps(result))
+
     return HttpResponse(json.dumps(result), content_type="application/json")
 
 def sqlServer():
