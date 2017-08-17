@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aae20dc-23be-4872-b3db-afc9e2e51494" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api_v1/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeatherStation/settings.py" afterPath="$PROJECT_DIR$/WeatherStation/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WeatherStation/urls.py" afterPath="$PROJECT_DIR$/WeatherStation/urls.py" />
-    </list>
+    <list default="true" id="6aae20dc-23be-4872-b3db-afc9e2e51494" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/api_v1/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -86,7 +82,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="891" />
+    <option name="x" value="608" />
     <option name="y" value="23" />
     <option name="width" value="1488" />
     <option name="height" value="993" />
@@ -279,7 +275,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="891" y="23" width="1488" height="993" extended-state="0" />
+    <frame x="608" y="23" width="1488" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15591398" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -365,7 +361,7 @@
     <entry file="file://$PROJECT_DIR$/api_v1/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
