@@ -22,6 +22,6 @@ key = ['weather_s','weather_e','temphigh','templow','winddirect','windpow','qual
 value = [result['daily'][0]['night']['weather'],result['daily'][0]['day']['weather'],result['temphigh'],result['templow'],result['winddirect'],result['daily'][0]['day']['windpower'],result['aqi']['quality'],result['index'][1]['detail']]
 
 file_path = "F:\\nginx\html\\weatherStation\\weatherData.json"
-    with codecs.open(file_path,'w','utf-8') as f:
-        f.write(json.dumps(dict(zip(key,value))))
-        f.close()
+with codecs.open(file_path,'w','utf-8') as f:
+	f.write(json.dumps(dict(zip(key,value))))
+	f.close()
