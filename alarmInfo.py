@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 url = 'http://apis.baidu.com/heweather/pro/weather?'
 
 data = {
-    "city":"xinyi"
+    "city":"dongsheng"
 }
 param = urlencode(data)
 url = url + param
