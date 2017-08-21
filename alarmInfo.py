@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 url = 'http://apis.baidu.com/heweather/pro/weather?'
 
 data = {
-    "city":"dongsheng"
+    "city":"xinyi"
 }
 param = urlencode(data)
 url = url + param
@@ -18,7 +18,7 @@ result = res['HeWeather data service 3.0']
 
 alarmInfo = {}
 
-with codecs.open("alarmInfo.json",'r') as f:
+with codecs.open("alarmInfo.json",'r',encoding= 'utf-8') as f:
     alarm_pic = json.load(f)
 
 if 'alarms' in result[0].keys():
