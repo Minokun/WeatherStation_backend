@@ -1,0 +1,14 @@
+{
+  "干旱":{"蓝色":"NULL", "黄色":"NULL", "橙色":"http://www.12379.cn/images/mrtp/1_300612506.jpg", "红色":"http://www.12379.cn/images/mrtp/1_3006102881.jpg"},
+  "道路结冰":{"蓝色":"NULL", "黄色":"http://www.12379.cn/images/mrtp/1_2746808530.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2746829033.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2746813279.jpg"},
+  "大雾":{"蓝色":"NULL", "黄色":"http://www.12379.cn/images/mrtp/1_2747547297.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2747567799.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2747553050.jpg"},
+  "大风":{"蓝色":"http://www.12379.cn/images/mrtp/1_2746968803.jpg", "黄色":"http://www.12379.cn/images/mrtp/1_2746954055.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2746944284.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2746939535.jpg"},
+  "沙尘":{"蓝色":"NULL", "黄色":"http://www.12379.cn/images/mrtp/1_2748814834.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_27487986.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2748835337.jpg"},
+  "高温":{"蓝色":"NULL", "黄色":"http://www.12379.cn/images/mrtp/1_2748875610.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2748896112.jpg", "红色":"http://www.12379.cn/images/mrtp/1_274888359.jpg"},
+  "霜冻":{"蓝色":"http://www.12379.cn/images/mrtp/1_2748994103.jpg", "黄色":"http://www.12379.cn/images/mrtp/1_2748973601.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2748988350.jpg", "红色":"NULL"},
+  "寒潮":{"蓝色":"http://www.12379.cn/images/mrtp/1_2749028852.jpg", "黄色":"http://www.12379.cn/images/mrtp/1_2749034605.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2749055108.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2749049354.jpg"},
+  "冰雹":{"蓝色":"NULL", "黄色":"NULL", "橙色":"http://www.12379.cn/images/mrtp/1_2749082235.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2749077487.jpg"},
+  "雷电":{"蓝色":"NULL", "黄色":"http://www.12379.cn/images/mrtp/1_2749143742.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_274916227.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2749155478.jpg"},
+  "暴雪":{"蓝色":"http://www.12379.cn/images/mrtp/1_2749201231.jpg ", "黄色":"http://www.12379.cn/images/mrtp/1_2749196482.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_274918729.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2749175980.jpg"},
+  "暴雨":{"蓝色":"http://www.12379.cn/images/mrtp/1_2749252006.jpg", "黄色":"http://www.12379.cn/images/mrtp/1_2749246253.jpg", "橙色":"http://www.12379.cn/images/mrtp/1_2749231504.jpg", "红色":"http://www.12379.cn/images/mrtp/1_2749221733.jpg"}
+}
