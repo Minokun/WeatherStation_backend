@@ -23,7 +23,7 @@ def apiData():
     res_temp = requests.get(url_temp).json()  
     res_other = requests.get(url_other).json()  
     for key,item in enumerate(res_temp['DS']):
-        res_other['DS'][key]['TEM'] = item['TEM']
+        res_other['DS'][key]['TEM'] = item['TEM'] if float(item['TEM']) < 50 else res_other['DS'][key]['TEM_Max']
 
     res_deal = []
     for item in res_other['DS']:
