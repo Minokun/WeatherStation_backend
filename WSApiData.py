@@ -74,7 +74,6 @@ def sqlServer():
 
     cursor.close()
     conn.close()
-
     return data_sqlserver
 
 def validate(num):
