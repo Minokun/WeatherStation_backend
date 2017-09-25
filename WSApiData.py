@@ -16,14 +16,14 @@ def apiData():
     current_minutes = time.strftime("%M",time.localtime(current_time_unix)) 
     minutes = int(int(current_minutes)/5) * 5
     minutes = str(minutes) if minutes >= 10 else "0" + str(minutes)
-    time_data = current_time + minutes + "00"
+    time_data = current_time + "00" + "00"
 
     url_temp = "http://10.62.89.55/cimiss-web/api?userId=BEHT_BFDS_dsqqxj&pwd=ds53543&interfaceId=getSurfEleByTimeAndStaID&dataCode=SURF_CHN_MAIN_MIN&elements=TEM&times=" + time_data + "&staIds=53543,C3024,C3023&limitCnt=30&dataFormat=json"
     url_other = "http://10.62.89.55/cimiss-web/api?userId=BEHT_BFDS_dsqqxj&pwd=ds53543&interfaceId=getSurfEleByTimeAndStaID&dataCode=SURF_CHN_OTHER_MIN&elements=TEM_Max,TEM_Min,PRE_1h,WIN_D_Avg_10mi,WIN_S_Avg_10mi&times=" + time_data + "&staIds=53543,C3024,C3023&limitCnt=30&dataFormat=json"
     res_temp = requests.get(url_temp).json()  
     res_other = requests.get(url_other).json()  
     for key,item in enumerate(res_temp['DS']):
-        res_other['DS'][key]['TEM'] = item['TEM'] if float(item['TEM']) < 50 else res_other['DS'][key]['TEM_Max']
+        res_other['DS'][key]['TEM'] = item['TEM'] if float(item['TEM']) < 50 else ''
 
     res_deal = []
     for item in res_other['DS']:
@@ -49,14 +49,14 @@ def apiData2():
     current_minutes = time.strftime("%M",time.localtime(current_time_unix))
     minutes = int(int(current_minutes)/5) * 5
     minutes = str(minutes) if minutes >= 10 else "0" + str(minutes)
-    time_data = current_time + minutes + "00"
+    time_data = current_time + "00" + "00"
 
     url_temp = "http://10.62.89.55/cimiss-web/api?userId=BEHT_BFDS_dsqqxj&pwd=ds53543&interfaceId=getSurfEleByTimeAndStaID&dataCode=SURF_CHN_MAIN_MIN&elements=TEM&times=" + time_data + "&staIds=53543,C3024,C3021,C3023,C3161,C3029&limitCnt=30&dataFormat=json"
     url_other = "http://10.62.89.55/cimiss-web/api?userId=BEHT_BFDS_dsqqxj&pwd=ds53543&interfaceId=getSurfEleByTimeAndStaID&dataCode=SURF_CHN_OTHER_MIN&elements=TEM_Max,TEM_Min,PRE_1h,WIN_D_Avg_10mi,WIN_S_Avg_10mi&times=" + time_data + "&staIds=53543,C3024,C3021,C3023,C3161,C3029&limitCnt=30&dataFormat=json"
     res_temp = requests.get(url_temp).json()
     res_other = requests.get(url_other).json()
     for key,item in enumerate(res_temp['DS']):
-        res_other['DS'][key]['TEM'] = item['TEM']
+        res_other['DS'][key]['TEM'] = item['TEM'] if float(item['TEM']) < 50 else ''
 
     res_deal = []
     for item in res_other['DS']:
