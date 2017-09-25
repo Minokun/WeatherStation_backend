@@ -37,6 +37,37 @@ def apiData():
         f.write(json.dumps(result))
         f.close()
 
+def apiData2():
+
+    import requests
+    import json
+    import time
+    import codecs
+
+    current_time_unix = int(time.time()) - 8 * 3600 - 5 * 60
+    current_time = time.strftime("%Y%m%d%H",time.localtime(current_time_unix))
+    current_minutes = time.strftime("%M",time.localtime(current_time_unix))
+    minutes = int(int(current_minutes)/5) * 5
+    minutes = str(minutes) if minutes >= 10 else "0" + str(minutes)
+    time_data = current_time + minutes + "00"
+
+    url_temp = "http://10.62.89.55/cimiss-web/api?userId=BEHT_BFDS_dsqqxj&pwd=ds53543&interfaceId=getSurfEleByTimeAndStaID&dataCode=SURF_CHN_MAIN_MIN&elements=TEM&times=" + time_data + "&staIds=53543,C3024,C3021,C3023,C3161,C3029&limitCnt=30&dataFormat=json"
+    url_other = "http://10.62.89.55/cimiss-web/api?userId=BEHT_BFDS_dsqqxj&pwd=ds53543&interfaceId=getSurfEleByTimeAndStaID&dataCode=SURF_CHN_OTHER_MIN&elements=TEM_Max,TEM_Min,PRE_1h,WIN_D_Avg_10mi,WIN_S_Avg_10mi&times=" + time_data + "&staIds=53543,C3024,C3021,C3023,C3161,C3029&limitCnt=30&dataFormat=json"
+    res_temp = requests.get(url_temp).json()
+    res_other = requests.get(url_other).json()
+    for key,item in enumerate(res_temp['DS']):
+        res_other['DS'][key]['TEM'] = item['TEM']
+
+    res_deal = []
+    for item in res_other['DS']:
+        item['direction'] = directionJudge(int(item['WIN_D_Avg_10mi']))
+        res_deal.append(item)
+
+    file_path = "F:\\nginx\html\\weatherStation\\apiData2.json"
+    with codecs.open(file_path,'w','utf-8') as f:
+        f.write(json.dumps(res_deal))
+        f.close()
+
 def sqlServer():
     import pymssql
 
@@ -106,3 +137,4 @@ def directionJudge(num):
 
 if __name__ == "__main__":
     apiData()
+    apiData2()
